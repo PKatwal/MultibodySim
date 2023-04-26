@@ -12,5 +12,5 @@ namespace myMath {
         double vel;
     };
     
-    void simulate(double tMax, double dt, const std::string fileName); // Update the simulate function declaration
+    void simulate(double tMax, double dt, const std::string& fileName); // Update the simulate function declaration
 }

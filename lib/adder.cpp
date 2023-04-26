@@ -3,7 +3,7 @@
 #include <fstream>
 #include <string>
 
-void myMath::simulate(double tMax, double dt, std::string fileName)
+void myMath::simulate(double tMax, double dt, const std::string& fileName)
 {
     myMath::Point p; // Use the fully qualified name myMath::Point
     p.t = 0;

@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <string>
+
 
 const double g = 9.81; // acceleration of gravity
 const double L = 1;    // length in meters
