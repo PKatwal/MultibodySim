@@ -4,6 +4,7 @@ set(ProjectName "MBS-Sim")
 project("${ProjectName}")
 
 set(CMAKE_CXX_STANDARD 11)
+include_directories(include)
 
 add_library("${ProjectName}-lib" STATIC
     # Source files
@@ -40,8 +41,10 @@ add_executable(tests
     tests/test.cpp
     
     # Header files
-    tests/tests.h
+
    
 )
-target_link_libraries(tests PRIVATE Catch2::Catch2WithMain "${ProjectName}-lib")
+target_include_directories(tests PRIVATE include)
+
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain "${ProjectName}-lib" )
 

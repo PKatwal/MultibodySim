@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include "../include/constants.h"
 
 
 const double g = 9.81; // acceleration of gravity

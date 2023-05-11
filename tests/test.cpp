@@ -1,17 +1,18 @@
 #include <catch2/catch_test_macros.hpp>
+#include "../lib/eulercromer.h"
+#include"../lib/adder.h"
+#include "../include/constants.h"
+#include "tests.h"
 
-static int Factorial( int number ) {
-//    return number <= 1 ? number : Factorial( number - 1 ) * number;  // fail
- return number <= 1 ? 1      : Factorial( number - 1 ) * number;  // pass
-}
-
-TEST_CASE( "Factorial of 0 is 1 (fail)", "[single-file]" ) {
-    REQUIRE( Factorial(0) == 1 );
-}
-
-TEST_CASE( "Factorials of 1 and higher are computed (pass)", "[single-file]" ) {
-    REQUIRE( Factorial(1) == 1 );
-    REQUIRE( Factorial(2) == 2 );
-    REQUIRE( Factorial(3) == 6 );
-    REQUIRE( Factorial(10) == 3628800 );
+TEST_CASE( "EulerCromer Test 0 = 0 (pass)", "[single-file]" ) {
+    myMath::Point p; // Use the fully qualified name myMath::Point
+    p.t = 0;
+    p.theta = 2.3562;
+    p.omega = 0;
+    p.pos = 0;
+    p.vel = 0; 
+  
+    REQUIRE( p.pos == 0);
+    EulerCromerStep(p, 0.1, myMath::linearAccFunc, myMath::angularAccFunc);
+    REQUIRE( p.pos != 0);
 }
