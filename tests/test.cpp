@@ -15,4 +15,5 @@ TEST_CASE( "EulerCromer Test 0 = 0 (pass)", "[single-file]" ) {
     REQUIRE( p.pos == 0);
     EulerCromerStep(p, 0.1, myMath::linearAccFunc, myMath::angularAccFunc);
     REQUIRE( p.pos != 0);
+    
 }

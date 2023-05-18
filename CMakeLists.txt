@@ -41,7 +41,7 @@ add_executable(tests
     tests/test.cpp
     
     # Header files
-
+    tests/tests.h
    
 )
 target_include_directories(tests PRIVATE include)

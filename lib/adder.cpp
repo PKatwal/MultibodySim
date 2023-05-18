@@ -2,6 +2,7 @@
 #include"eulercromer.h"
 #include <fstream>
 #include <string>
+#include <cmath>
 #include "../include/constants.h"
 
 void myMath::simulate(double tMax, double dt, const std::string& fileName)
